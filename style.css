@@ -1,0 +1,272 @@
+
+/* this is the css for the booking page */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Condensed:wght@300&display=swap%27');
+
+:root{
+    --maim-color : #212F3D;
+    --second-color : #192f6a;
+    --text-color : #ECF0F1;
+    --second-text-color: #273746;
+    --bg-color: #d7dbdd52 ;
+    --second-bg-color : #FDFEFE;
+    --third-bg-color: #2C3E50;
+    /* Box Shadow*/
+    --box-shadow : 2px 2px 18px rgb(14 52 54 / 20%); 
+    --second-box-shadow: 0px 0px 18px rgb(14 52 54 / 20%);
+}
+
+
+.containers{
+    width: 100%;
+  padding: 0rem 2rem;
+  align-items: center;
+  text-align: center;
+}
+.container1{
+    display: inline-block;
+    background-color: var(--third-bg-color);
+    width: 40%;
+    height: 500px;
+    vertical-align: middle;
+    
+    text-align: center;
+
+}
+
+.container1 h1{
+    font-size: 20px;
+     color: white;
+
+
+
+}
+.container1 h3{
+color: var(--second-bg-color);
+}
+.container1 p{
+
+color: var(--text-color)
+
+}
+.imgg{
+    background-image: url(https://images.unsplash.com/photo-1484156818044-c040038b0719?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+    display: inline-block;
+    box-shadow:  0px 18px rgb(14 52 54 / 20%);
+    
+    background-color: white;
+    width: 40%;
+    height: 500px;
+    vertical-align: middle;
+
+
+
+
+
+}
+
+
+.container2{
+    display: inline-block;
+
+    box-shadow:   0px 18px rgb(14 52 54 / 20%);
+
+    background-color: white;
+
+    width: 80%;
+    height: 550px;
+    vertical-align: middle;
+    
+}
+.container2 div{
+    display: flex;
+    justify-content: space-around;
+    margin: 15px;
+}
+.container2 h1{
+    font-family: 'Poppins', sans-serif;
+
+    color: var(--second-color)
+}
+.container2 div p {
+    font-family: 'Poppins', sans-serif;
+
+    color: var(--second-color);
+    font-size: 18px;
+    width: 200px;
+}
+.container2 input , .container2 select{
+        cursor: pointer;
+        height: 40px;
+        width: 30%;
+        outline: none;
+        border: none;
+        border-bottom:  0px 18px rgb(14 52 54 / 20%);
+
+
+}
+.container2 select:hover, .container2 input:hover{
+  animation: pulse 1s;
+  box-shadow:0px 2px rgb(14 52 54 / 20%);
+  color:#000;
+
+}
+
+.container2 select option{
+    font-size: 16px;
+}
+
+.container2 button{
+    background-color: var(--second-bg-color);
+    box-shadow:  0px 2px rgb(14 52 54 / 20%);
+    width: 30%;
+    height: 30px;
+    border: none;
+    outline: none;
+
+
+}
+.container2 button:hover,
+.container2 button:focus {
+  animation: pulse 1s;
+  box-shadow: 0px 2px rgb(14 52 54 / 20%) transparent;
+  background:#fff;
+  box-shadow:0px 2px rgb(14 52 54 / 20%);;
+  color:#000;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 var(--hover); }
+}
+
+@media screen and (max-width :995px) {
+    .imgg{
+
+        width: 0;
+        height: 0;
+    }
+    .containers{
+        width: 90%;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+
+    }
+    .containers div{
+        width: 300px;
+
+
+    }
+    .container2{
+        height: fit-content;
+        margin: 0;
+        padding: 0;
+    }
+    .container2 div{
+           display: grid;
+
+
+    }
+    .container2 button{
+        width: 200px;;
+
+    }
+    .container2 input , .container2 select{
+        width : 90%;
+        outline: none;
+        border: none;
+        border-bottom:  1px solid black;
+    }
+}
+
+
+
+/* this is the css for the menu */
+body{
+color: #212F3D;
+background-color: #d7dbdd52;
+font-family: 'Poppins', sans-serif;
+}
+.menu-main{
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 1.5em;
+    box-shadow: 0px 0px 18px rgb(14 52 54 / 20%);
+}
+
+.menu-header{
+text-align: center;
+}
+
+.menu{
+    font-size: 14px;
+}
+
+.menu-group-heading{
+    margin: 0;
+    padding-bottom: 1em;
+    border-bottom: 2px solid #333;
+}
+
+/* makes menu into a grid with one column, small screen. wide screen two column is in media tag*/
+.menu-group{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5em;
+    padding: 1.5em 0;
+}
+
+.menu-item{
+    display: flex;
+}
+
+/* image costumisation code taken from https://www.w3schools.com/howto/howto_css_rounded_images.asp and https://www.w3schools.com/howto/howto_css_border_image.asp */
+.menu-item-img{
+    height: 80px;
+    width: 80px;
+    flex-shrink: 0;
+    object-fit: cover;
+    margin-right: 1.5em;
+    border: 4px solid;
+    border-radius: 10%;
+    border-color: #212F3D;
+}
+/* makes sure the text grows with the rest of the page https://www.w3schools.com/cssref/css3_pr_flex-grow.php */
+.menu-item-text{
+    flex-grow: 1;
+}
+.menu-item-heading{
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+}
+.menu-item-name{
+    margin-right: 1.5em;
+}
+.menu-item-description{
+    line-height: 1.6;
+}
+
+.allergens{
+    font-style: italic;
+    opacity: 80%;
+}
+@media screen and (min-width: 992px){
+    .menu{
+        font-size: 16px;
+    }
+    .menu-group{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .menu-item-img{
+        height: 125px;
+        width: 125px;
+    }
+
+}
+/* this was added specifically to work with the galaxy fold.*/
+@media(max-width: 280px){
+    .menu-item-heading{
+        font-size: 13px;
+    }
+    
+}
